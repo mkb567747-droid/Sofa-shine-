@@ -2,51 +2,314 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SofaShine | Photo Gallery & Before After</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SofaShine - Professional Sofa Cleaning</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f5f8fa;color:#172033}
-header{padding:18px 6%;background:#101827;color:#fff;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:25px;font-weight:800}.logo span{color:#25c7a0}
-nav a{color:#fff;text-decoration:none;margin-left:18px}
-.hero{padding:55px 6%;text-align:center;background:#eafff9}.hero h1{font-size:42px;margin:8px}.hero p{color:#5d6878}
-.btn{display:inline-block;background:#10b981;color:#fff;text-decoration:none;padding:13px 20px;border-radius:9px;font-weight:bold;margin-top:12px;cursor:pointer;border:none}
-.btn:hover{background:#059669}
-section{padding:50px 6%}.heading{text-align:center;margin-bottom:28px}.heading h2{font-size:32px;margin:0 0 8px}.heading p{color:#687386}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.photo{height:230px;background:#e4e9ee;border-radius:15px;display:flex;align-items:center;justify-content:center;overflow:hidden;color:#697586;font-weight:bold;text-align:center;position:relative}
-.photo img{width:100%;height:100%;object-fit:cover}
-.photo-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;height:100%;background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);color:white;font-size:18px}
-.beforeafter{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.ba{background:#fff;border-radius:15px;padding:12px;box-shadow:0 5px 18px #0000000d}.ba h3{text-align:center;margin:10px 0;color:#101827}
-.contact{background:#101827;color:#fff;text-align:center}.contact p{color:#cbd5e1}
-footer{text-align:center;padding:20px;background:#fff;color:#667085}
-@media(max-width:700px){nav{display:none}.gallery{grid-template-columns:1fr 1fr}.beforeafter{grid-template-columns:1fr}.photo{height:180px}.hero h1{font-size:34px}}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
+
+header {
+  background: #1a2745;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #25c7a0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #25c7a0;
+}
+
+.hero {
+  background: linear-gradient(135deg, #eafff9 0%, #e0f7f4 100%);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #101827;
+}
+
+.hero p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #10b981;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  margin: 5px;
+}
+
+.btn:hover {
+  background: #059669;
+}
+
+section {
+  padding: 30px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #1a2745;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-text {
+  padding: 12px;
+  text-align: center;
+}
+
+.card-text h3 {
+  color: #1a2745;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.card-text p {
+  color: #666;
+  font-size: 13px;
+}
+
+.services {
+  background: #f8f9fa;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.service-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.service-card h3 {
+  color: #1a2745;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.price {
+  color: #10b981;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.contact-info {
+  background: #1a2745;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.contact-info p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+footer {
+  background: #0f1820;
+  color: #999;
+  text-align: center;
+  padding: 15px;
+  font-size: 12px;
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: #25c7a0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+@media (max-width: 600px) {
+  nav {
+    display: none;
+  }
+  
+  .hero h1 {
+    font-size: 24px;
+  }
+  
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
 <body>
-<header><div class="logo">Sofa<span>Shine</span> ✨</div><nav><a href="#gallery">Gallery</a><a href="#beforeafter">Before/After</a><a href="#contact">Contact</a></nav></header>
 
-<section class="hero"><h1>Our Cleaning Work ✨</h1><p>Real sofa & mattress cleaning work by SofaShine — Deoghar</p>
-<a class="btn" href="https://wa.me/919508917240?text=Hello%20SofaShine%2C%20I%20want%20to%20book%20a%20cleaning%20service." target="_blank">📱 Book Now</a></section>
+<header>
+  <div class="logo">Sofa<span>Shine</span> ✨</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-<section id="gallery"><div class="heading"><h2>📸 Photo Gallery</h2><p>Apne cleaning ke best photos</p></div>
-<div class="gallery">
-<div class="photo"><div class="photo-placeholder"><div style="font-size:40px">🛋️</div><div style="margin-top:8px">PHOTO 1</div></div></div>
-<div class="photo"><div class="photo-placeholder"><div style="font-size:40px">🛋️</div><div style="margin-top:8px">PHOTO 2</div></div></div>
-<div class="photo"><div class="photo-placeholder"><div style="font-size:40px">🛋️</div><div style="margin-top:8px">PHOTO 3</div></div></div>
-<div class="photo"><div class="photo-placeholder"><div style="font-size:40px">🛋️</div><div style="margin-top:8px">PHOTO 4</div></div></div>
-<div class="photo"><div class="photo-placeholder"><div style="font-size:40px">🛋️</div><div style="margin-top:8px">PHOTO 5</div></div></div>
-<div class="photo"><div class="photo-placeholder"><div style="font-size:40px">🛋️</div><div style="margin-top:8px">PHOTO 6</div></div></div>
-</div></section>
+<section class="hero" id="home">
+  <h1>🛋️ Professional Sofa Cleaning</h1>
+  <p>Best cleaning service in Deoghar</p>
+  <a href="https://wa.me/919508917240?text=Hello%20SofaShine" class="btn" target="_blank">📱 Book Now</a>
+</section>
 
-<section id="beforeafter"><div class="heading"><h2>✨ Before & After</h2><p>Cleaning se pehle aur baad ka amazing result</p></div>
-<div class="beforeafter">
-<div class="ba"><div class="photo"><div class="photo-placeholder"><div style="font-size:40px">❌</div><div style="margin-top:8px">BEFORE</div></div></div><h3>🔴 Before Cleaning</h3></div>
-<div class="ba"><div class="photo"><div class="photo-placeholder"><div style="font-size:40px">✅</div><div style="margin-top:8px">AFTER</div></div></div><h3>🟢 After Cleaning</h3></div>
-</div></section>
+<section id="gallery">
+  <h2>✨ Before & After</h2>
+  <div class="gallery">
+    <div class="card">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='150' fill='%231a5f7a'/%3E%3Ctext x='200' y='75' font-size='16' fill='white' text-anchor='middle' dominant-baseline='middle'%3EBEFORE%3C/text%3E%3Crect width='400' height='150' y='150' fill='%230d7a6f'/%3E%3Ctext x='200' y='225' font-size='16' fill='white' text-anchor='middle' dominant-baseline='middle'%3EAFTER%3C/text%3E%3C/svg%3E" alt="Blue Sofa Cleaning">
+      <div class="card-text">
+        <h3>Blue Sofa Deep Cleaning</h3>
+        <p>Before & After Cleaning</p>
+      </div>
+    </div>
 
-<section class="contact" id="contact"><h2>📞 Book SofaShine Home Service</h2><p>📍 Deoghar &nbsp; | &nbsp; Sofa Cleaning ₹250 onwards &nbsp; | &nbsp; Single Mattress ₹600</p>
-<a class="btn" href="https://wa.me/919508917240?text=Hello%20SofaShine%2C%20I%20want%20to%20book%20a%20cleaning%20service." target="_blank">WhatsApp 9508917240</a></section>
-<footer>© 2026 SofaShine • Professional Home Cleaning Service</footer>
-</body></html>
+    <div class="card">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='150' fill='%23d4d4d4'/%3E%3Ctext x='200' y='75' font-size='16' fill='%23333' text-anchor='middle' dominant-baseline='middle'%3EBEFORE%3C/text%3E%3Crect width='400' height='150' y='150' fill='%23f5f5f5'/%3E%3Ctext x='200' y='225' font-size='16' fill='%23333' text-anchor='middle' dominant-baseline='middle'%3EAFTER%3C/text%3E%3C/svg%3E" alt="Mattress Cleaning">
+      <div class="card-text">
+        <h3>Mattress Deep Cleaning</h3>
+        <p>Before & After Cleaning</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='150' fill='%23c9b9a8'/%3E%3Ctext x='200' y='75' font-size='16' fill='%23333' text-anchor='middle' dominant-baseline='middle'%3EBEFORE%3C/text%3E%3Crect width='400' height='150' y='150' fill='%23e8dfd5'/%3E%3Ctext x='200' y='225' font-size='16' fill='%23333' text-anchor='middle' dominant-baseline='middle'%3EAFTER%3C/text%3E%3C/svg%3E" alt="Beige Sofa Cleaning">
+      <div class="card-text">
+        <h3>Beige Sofa Cleaning</h3>
+        <p>Before & After Cleaning</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <h2>Our Services</h2>
+  <div class="service-grid">
+    <div class="service-card">
+      <h3>🛋️ Sofa Cleaning</h3>
+      <p>Deep cleaning with stain removal</p>
+      <div class="price">₹250+</div>
+      <a href="https://wa.me/919508917240" class="btn" target="_blank">Book</a>
+    </div>
+    
+    <div class="service-card">
+      <h3>🛏️ Mattress Cleaning</h3>
+      <p>Complete sanitization included</p>
+      <div class="price">₹600+</div>
+      <a href="https://wa.me/919508917240" class="btn" target="_blank">Book</a>
+    </div>
+    
+    <div class="service-card">
+      <h3>🧹 Carpet Cleaning</h3>
+      <p>Wall-to-wall professional cleaning</p>
+      <div class="price">₹100/sq.ft</div>
+      <a href="https://wa.me/919508917240" class="btn" target="_blank">Book</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-info">
+    <h2>📞 Contact Us</h2>
+    <p>📍 Deoghar, Jharkhand</p>
+    <p>📱 WhatsApp: 9508917240</p>
+    <p>⏰ Available 7 Days a Week</p>
+    <a href="https://wa.me/919508917240?text=Hello%20SofaShine" class="btn" target="_blank">💬 Chat Now</a>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 SofaShine • Professional Cleaning Service</p>
+</footer>
+
+<a href="https://wa.me/919508917240?text=Hello%20SofaShine" target="_blank" class="whatsapp-btn">💬</a>
+
+</body>
+</html>
