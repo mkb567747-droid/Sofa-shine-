@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SofaShine | Photo Gallery & Before After</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f5f8fa;color:#172033}
+header{padding:18px 6%;background:#101827;color:#fff;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:25px;font-weight:800}.logo span{color:#25c7a0}
+nav a{color:#fff;text-decoration:none;margin-left:18px}
+.hero{padding:55px 6%;text-align:center;background:#eafff9}.hero h1{font-size:42px;margin:8px}.hero p{color:#5d6878}
+.btn{display:inline-block;background:#10b981;color:#fff;text-decoration:none;padding:13px 20px;border-radius:9px;font-weight:bold;margin-top:12px}
+section{padding:50px 6%}.heading{text-align:center;margin-bottom:28px}.heading h2{font-size:32px;margin:0 0 8px}.heading p{color:#687386}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.photo{height:230px;background:#e4e9ee;border-radius:15px;display:flex;align-items:center;justify-content:center;overflow:hidden;color:#697586;font-weight:bold;text-align:center}
+.photo img{width:100%;height:100%;object-fit:cover}
+.beforeafter{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.ba{background:#fff;border-radius:15px;padding:12px;box-shadow:0 5px 18px #0000000d}.ba h3{text-align:center;margin:10px 0}
+.contact{background:#101827;color:#fff;text-align:center}.contact p{color:#cbd5e1}
+footer{text-align:center;padding:20px;background:#fff;color:#667085}
+@media(max-width:700px){nav{display:none}.gallery{grid-template-columns:1fr 1fr}.beforeafter{grid-template-columns:1fr}.photo{height:180px}.hero h1{font-size:34px}}
+</style>
+</head>
+<body>
+<header><div class="logo">Sofa<span>Shine</span> ✨</div><nav><a href="#gallery">Gallery</a><a href="#beforeafter">Before/After</a><a href="#contact">Contact</a></nav></header>
+
+<section class="hero"><h1>Our Cleaning Work ✨</h1><p>Real sofa & mattress cleaning work by SofaShine — Deoghar</p>
+<a class="btn" href="https://wa.me/919508917240?text=Hello%20SofaShine%2C%20I%20want%20to%20book%20a%20cleaning%20service." target="_blank">📱 Book Now</a></section>
+
+<section id="gallery"><div class="heading"><h2>📸 Photo Gallery</h2><p>Yahan apne cleaning ke photos add karo</p></div>
+<div class="gallery">
+<div class="photo"><img src="photo1.jpg" alt="Sofa cleaning work" onerror="this.style.display='none';this.parentElement.innerHTML='PHOTO 1<br>photo1.jpg lagao'"></div>
+<div class="photo"><img src="photo2.jpg" alt="Sofa cleaning work" onerror="this.style.display='none';this.parentElement.innerHTML='PHOTO 2<br>photo2.jpg lagao'"></div>
+<div class="photo"><img src="photo3.jpg" alt="Sofa cleaning work" onerror="this.style.display='none';this.parentElement.innerHTML='PHOTO 3<br>photo3.jpg lagao'"></div>
+<div class="photo"><img src="photo4.jpg" alt="Sofa cleaning work" onerror="this.style.display='none';this.parentElement.innerHTML='PHOTO 4<br>photo4.jpg lagao'"></div>
+<div class="photo"><img src="photo5.jpg" alt="Sofa cleaning work" onerror="this.style.display='none';this.parentElement.innerHTML='PHOTO 5<br>photo5.jpg lagao'"></div>
+<div class="photo"><img src="photo6.jpg" alt="Sofa cleaning work" onerror="this.style.display='none';this.parentElement.innerHTML='PHOTO 6<br>photo6.jpg lagao'"></div>
+</div></section>
+
+<section id="beforeafter"><div class="heading"><h2>✨ Before & After</h2><p>Cleaning se pehle aur baad ka result</p></div>
+<div class="beforeafter">
+<div class="ba"><div class="photo"><img src="before1.jpg" alt="Before cleaning" onerror="this.style.display='none';this.parentElement.innerHTML='BEFORE PHOTO<br>before1.jpg lagao'"></div><h3>Before</h3></div>
+<div class="ba"><div class="photo"><img src="after1.jpg" alt="After cleaning" onerror="this.style.display='none';this.parentElement.innerHTML='AFTER PHOTO<br>after1.jpg lagao'"></div><h3>After</h3></div>
+</div></section>
+
+<section class="contact" id="contact"><h2>Book SofaShine Home Service</h2><p>📍 Deoghar &nbsp; | &nbsp; Sofa Cleaning ₹250 onwards &nbsp; | &nbsp; Single Mattress ₹600</p>
+<a class="btn" href="https://wa.me/919508917240?text=Hello%20SofaShine%2C%20I%20want%20to%20book%20a%20cleaning%20service." target="_blank">WhatsApp 9508917240</a></section>
+<footer>© 2026 SofaShine • Professional Home Cleaning Service</footer>
+</body></html>
